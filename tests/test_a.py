@@ -4,10 +4,10 @@ import io
 
 
 def test_a_solve_1(capsys, monkeypatch):
-    acutual = """\
+    actual = """\
 
 """
-    monkeypatch.setattr('sys.stdin', io.StringIO(acutual))
+    monkeypatch.setattr('sys.stdin', io.StringIO(actual))
     solve()
     expected = """\
 
@@ -16,10 +16,10 @@ def test_a_solve_1(capsys, monkeypatch):
 
 
 def test_a_solve_2(capsys, monkeypatch):
-    acutual = """\
+    actual = """\
 
 """
-    monkeypatch.setattr('sys.stdin', io.StringIO(acutual))
+    monkeypatch.setattr('sys.stdin', io.StringIO(actual))
     solve()
     expected = """\
 
@@ -28,10 +28,10 @@ def test_a_solve_2(capsys, monkeypatch):
 
 
 def test_a_solve_3(capsys, monkeypatch):
-    acutual = """\
+    actual = """\
 
 """
-    monkeypatch.setattr('sys.stdin', io.StringIO(acutual))
+    monkeypatch.setattr('sys.stdin', io.StringIO(actual))
     solve()
     expected = """\
 
