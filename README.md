@@ -3,30 +3,39 @@
 ## Requirements
 ### WSL
 1. Install chromium
-```
-$ sudo apt-get install -y chromium-browser chromium-chromedriver
-```
-
+    ```
+    $ sudo apt-get install -y chromium-browser chromium-chromedriver
+    ```
 1. Check chromedriver parent path
-```
-$ which chromedriver
-```
-
+    ```
+    $ which chromedriver
+    ```
 1. Add chromedriver path to environment
-```
-$ export PATH=$PATH:<chrome driver parent path>
-$ export CHROMEDRIVER_PATH=<chrome driver parent path>/chromedriver
-```
+    ```
+    $ export PATH=$PATH:<chrome driver parent path>
+    $ export CHROMEDRIVER_PATH=<chrome driver parent path>/chromedriver
+    ```
 
 
 ## Usage
-### Get test cases
-1. Install the package
-```
-$ pip install .[test]
-```
-
-1. Run the script
-```
-$ python tools/get_test_cases.py
-```
+### Quick Start
+1. Initialize environment
+    ```
+    $ cd modules/InitializeEnvironment
+    $ python -m venv .venv --upgrade-deps
+    $ source .venv/bin/activate
+    $ pip install .
+    $ cd ../../
+    $ python modules/InitializeEnvironment/src/initialize_environment.py https://atcoder.jp/contests/{contest_name}
+    $ deactivate
+    ```
+1. Install packages for pytest
+    ```
+    $ python -m venv .venv --upgrade-deps
+    $ source .venv/bin/activate
+    $ pip install '.[test]'
+    ```
+1. Test with pytest
+    ```
+    $ pytest -vv
+    ```

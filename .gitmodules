@@ -1,0 +1,3 @@
+[submodule "modules/InitializeEnvironment"]
+	path = modules/InitializeEnvironment
+	url = git@github.com:krkrkrr/Create-test-cases-from-AtCoder-probrem.git
